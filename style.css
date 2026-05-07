@@ -1,0 +1,188 @@
+/* File: style.css */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#050816;
+    padding:40px;
+}
+
+/* GALLERY */
+
+.gallery{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+/* CARD */
+
+.card{
+    position:relative;
+    overflow:hidden;
+    border-radius:30px;
+    transition:0.5s;
+    background:#111827;
+    box-shadow:0 0 30px rgba(0,0,0,0.5);
+}
+
+/* IMAGE */
+
+.card img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    transition:0.7s;
+}
+
+/* NAME */
+
+.name{
+    text-align:center;
+    padding:18px;
+    font-size:22px;
+    font-weight:bold;
+    color:white;
+    background:linear-gradient(45deg,#ff0066,#ff4d6d);
+    letter-spacing:1px;
+    border-top:4px solid #fff;
+}
+
+/* DIFFERENT PROFESSIONAL DESIGNS */
+
+.style1{
+    border:4px solid #ff4d6d;
+}
+
+.style1:hover img{
+    transform:scale(1.1);
+}
+
+.style2{
+    transform:rotate(-1deg);
+    border:4px solid #38bdf8;
+}
+
+.style2:hover{
+    transform:rotate(0deg) scale(1.03);
+}
+
+.style3{
+    border:4px solid #9333ea;
+}
+
+.style3 img{
+    filter:grayscale(100%);
+}
+
+.style3:hover img{
+    filter:grayscale(0%);
+    transform:scale(1.08);
+}
+
+.style4{
+    border:4px solid #22c55e;
+    box-shadow:0 0 35px #22c55e;
+}
+
+.style4:hover{
+    transform:translateY(-10px);
+}
+
+.style5{
+    border:4px solid gold;
+}
+
+.style5 img{
+    border-radius:0 0 100px 0;
+}
+
+.style6{
+    border:4px solid cyan;
+    backdrop-filter:blur(10px);
+}
+
+.style6:hover img{
+    transform:rotate(2deg) scale(1.07);
+}
+
+.style7{
+    border:4px solid #ff6600;
+}
+
+.style7 img{
+    filter:brightness(70%);
+}
+
+.style7:hover img{
+    filter:brightness(100%);
+}
+
+.style8{
+    border:4px solid #ffffff;
+    background:rgba(255,255,255,0.1);
+}
+
+.style8:hover{
+    transform:scale(1.05);
+}
+
+.style9{
+    border:4px solid #ff00ff;
+}
+
+.style9:hover{
+    transform:perspective(1000px) rotateY(10deg);
+}
+
+.style10{
+    border:4px solid #00ff99;
+}
+
+.style10:hover img{
+    transform:scale(1.12);
+}
+
+/* FLOWER LINES */
+
+.card::before{
+    content:"🌹 🌹 🌹 🌹 🌹";
+    position:absolute;
+    top:10px;
+    left:10px;
+    font-size:22px;
+    z-index:2;
+}
+
+.card::after{
+    content:"🌹 🌹 🌹 🌹 🌹";
+    position:absolute;
+    bottom:70px;
+    right:10px;
+    font-size:22px;
+    z-index:2;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+body{
+    padding:20px;
+}
+
+.card img{
+    height:350px;
+}
+
+.name{
+    font-size:18px;
+}
+
+}
